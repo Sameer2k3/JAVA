@@ -2,26 +2,14 @@ import java.util.Scanner;
 
 public class input {
     public static void main(String[] args) {
-
+        System.out.println("taking input from the user");
         Scanner sc = new Scanner(System.in);
-
-        // Taking String input
-        System.out.print("Enter your name  brother: ");
+        System.out.println("enter a number");
+        int num = sc.nextInt();
+        sc.nextLine(); // consume the newline character left by nextInt()
+        System.out.println("enter your name");
         String name = sc.nextLine();
-
-        // Taking integer input
-        System.out.print("Enter your age: ");
-        int age = sc.nextInt();
-
-        // Taking double input
-        System.out.print("Enter your height (in meters): ");
-        double height = sc.nextDouble();
-
-        System.out.println("\n--- User Details ---");
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-        System.out.println("Height: " + height + " m");
-
-        sc.close();
-    }
+        
+        System.out.println("you entered: " + num + " and your name is: " + name);
+    } 
 }
